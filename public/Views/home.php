@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </a>
-            <div class="popup visible">
+            <div class="popup">
             <div class="popup-content">
                     <h1>Inicie seu dia:</h1>
                     <i class="close fa-2xl fa-solid fa-xmark"></i>

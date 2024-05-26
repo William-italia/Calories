@@ -206,6 +206,7 @@ a {
 
 /* POPUP */
 .popup {
+    display: none;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -234,7 +235,7 @@ a {
 }
 
 .visible {
-    display: none;
+    display: block;
 }
 
 /* PAGINA DE LOGIN */
