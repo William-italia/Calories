@@ -15,7 +15,7 @@
             </div>
             <a class="forgot-pass">Esqueci minha senha</a>
             <div class="buttons">
-                <button class="btn-login">Acessar</button>
+                <a href="?page=home" class="btn-login">Acessar</a>
                 <a href="?page=register" class="btn-login register">Cadastrar</a>
             </div>
         </form>
