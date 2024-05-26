@@ -18,6 +18,7 @@ a {
     text-decoration: none;
 }
 
+
 .navbar, .nav-links, .login {
     display: flex;
     align-items: center;
@@ -199,4 +200,79 @@ a {
 
 .active a{
     color: #15ff00;
+}
+
+/* PAGINA DE LOGIN */
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    background: #0a6c01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-login {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.box-login h1 {
+    margin: 2rem 0;
+}
+
+.box-login p {
+    margin-bottom: 2rem;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-input input {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: .8rem;
+    margin-bottom: 2rem;
+}
+
+.forgot-pass {
+    text-decoration: underline;
+    color: #333;
+}
+
+.buttons {
+    margin: 2rem 0 2rem 0;
+}
+
+.btn-login {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #11a804;
+    color: #fff;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    margin-top: 1rem 0;
+    border-radius: .5rem;
+    transition: all .5s ease-in-out;
+}
+
+.btn-login:hover {
+    opacity: .5;
+}
+
+.btn-login.register {
+    margin-top: 1rem;
+    background: #ffffff;
+    color: #11a804;
+    border: 2px solid #11a804;
+}
+
+.btn-login.register:hover {
+    background-color: #11a804;
+    color: #fff;
 }
