@@ -3,7 +3,7 @@
 $days = [];
 
 // Gerando dados para cada dia do mês
-for ($dia = 1; $dia <= 14; $dia++) {
+for ($dia = 1; $dia <= 4; $dia++) {
     // Formata o dia com dois dígitos (01, 02, ..., 31)
     $diaFormatado = str_pad($dia, 2, '0', STR_PAD_LEFT);
     
