@@ -110,13 +110,14 @@ a {
 
 .box-day  {
     background: #ffffff;
-    /* border: 2px solid #b3b3b3; */
+    border-top: 4px solid #11a804;
+    border-left: 1px solid #11a804;
+    border-right: 1px solid #11a804;
     width: 234px;
     height: 234px;
     display: inline-block;
     border-radius: 1rem;
     box-shadow: rgba(17, 168, 4, 0.4) 0px 5px, rgba(17, 168, 4, 0.3) 0px 10px, rgba(17, 168, 4, 0.2) 0px 15px, rgba(17, 168, 4, 0.1) 0px 20px, rgba(17, 168, 4, 0.05) 0px 25px;
-
     transition: all .5s ease-in-out;
 }
 
@@ -146,7 +147,7 @@ a {
     background-color: rgb(125, 243, 67);
     border-radius: 50%;
     color: #fff;
-    
+    transition: all .5s ease-in-out;
 }
 
 .icon {
@@ -189,6 +190,10 @@ a {
 
 
 .box-day {
+    margin: 1rem;
+}
+
+.box-day-add {
     margin: 1rem;
 }
 
