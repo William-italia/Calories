@@ -28,6 +28,7 @@ a {
     padding: .8rem 30px;
     background-color: rgb(55, 153, 7);
     font-size: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .nav-item:nth-child(1) {
@@ -95,28 +96,27 @@ a {
     display: block;
 }
 
-
-
 .box-day-add {
+    margin-top: 1rem;
     width: 234px;
     height: 234px;
     background: #ffffff;
     border: 2px solid #b3b3b3;
     padding: 4rem;
-    display: inline-block;
     border-radius: 1rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(17, 168, 4, 0.4) 0px 5px, rgba(17, 168, 4, 0.3) 0px 10px, rgba(17, 168, 4, 0.2) 0px 15px, rgba(17, 168, 4, 0.1) 0px 20px, rgba(17, 168, 4, 0.05) 0px 25px;
     transition: all .5s ease-in-out;
 }
 
 .box-day  {
     background: #ffffff;
-    border: 2px solid #b3b3b3;
+    /* border: 2px solid #b3b3b3; */
     width: 234px;
     height: 234px;
     display: inline-block;
     border-radius: 1rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(17, 168, 4, 0.4) 0px 5px, rgba(17, 168, 4, 0.3) 0px 10px, rgba(17, 168, 4, 0.2) 0px 15px, rgba(17, 168, 4, 0.1) 0px 20px, rgba(17, 168, 4, 0.05) 0px 25px;
+
     transition: all .5s ease-in-out;
 }
 
@@ -132,6 +132,9 @@ a {
 
 .date {
     margin-bottom: .5rem;
+    color: #11a804;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .circle {
@@ -151,8 +154,13 @@ a {
     font-weight: 900;
 }
 
+#days-section {
+    display: flex;
+    justify-content: center;
+}
+
 #days-section .container {
-    padding: 2rem;
+    margin: 2rem;
 }
 
 .box-day-add:hover {
@@ -169,15 +177,19 @@ a {
 
 .box-day-add:hover .circle {
     cursor: pointer;
-
     background: rgb(9, 255, 0);
 }
 
 .day {
     display: grid;
-    row-gap: 2rem;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    row-gap: 2rem;
+}
+
+
+.box-day {
+    margin: 1rem;
 }
 
 .active a{

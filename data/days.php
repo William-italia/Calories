@@ -1,54 +1,28 @@
 <?php
 
-$days = [
-  [
-    'data' => '27/05',
-    'refeicoes' => 4,
-    'calorias' => 3500,
-  ],
-  [
-    'data' => '28/05',
-    'refeicoes' => 3,
-    'calorias' => 3000,
-  ],
-  [
-    'data' => '29/05',
-    'refeicoes' => 2,
-    'calorias' => 2500,
-  ],
-  [
-    'data' => '30/05',
-    'refeicoes' => 3,
-    'calorias' => 2800,
-  ],
-  [
-    'data' => '31/05',
-    'refeicoes' => 4,
-    'calorias' => 3200,
-  ],
-  [
-    'data' => '01/06',
-    'refeicoes' => 2,
-    'calorias' => 2000,
-  ],
-  [
-    'data' => '02/06',
-    'refeicoes' => 3,
-    'calorias' => 2700,
-  ],
-  [
-    'data' => '03/06',
-    'refeicoes' => 2,
-    'calorias' => 2200,
-  ],
-  [
-    'data' => '04/06',
-    'refeicoes' => 3,
-    'calorias' => 2900,
-  ],
-  [
-    'data' => '05/06',
-    'refeicoes' => 2,
-    'calorias' => 2400,
-  ],
-];
+$days = [];
+
+// Gerando dados para cada dia do mês
+for ($dia = 1; $dia <= 14; $dia++) {
+    // Formata o dia com dois dígitos (01, 02, ..., 31)
+    $diaFormatado = str_pad($dia, 2, '0', STR_PAD_LEFT);
+    
+    // Data no formato 'dd/mm'
+    $data = $diaFormatado . '/07'; // Supondo que seja julho, você pode ajustar o mês conforme necessário
+
+    // Número aleatório de refeições feitas (entre 1 e 5)
+    $refeicoes = rand(1, 5);
+
+    // Calorias aleatórias consumidas (entre 500 e 2500 kcal)
+    $calorias = rand(500, 2500);
+
+    $id = $dia;
+
+    // Adiciona os dados do dia ao array principal
+    $days[] = [
+        'id' => $id,
+        'data' => $data,
+        'refeicoes' => $refeicoes,
+        'calorias' => $calorias,
+    ];
+}

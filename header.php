@@ -1,11 +1,13 @@
+<?php include_once './data/days.php';?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calories</title>
-    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -31,7 +33,7 @@
             </ul>
             <ul class="login">
                 <li class="login-item"><a href="#">William</a></li>
-                <li class="login-item "><img class="box-img" src="../assets/img/perfil.png" alt=""></li>
+                <li class="login-item "><img class="box-img" src="./assets/img/perfil.png" alt=""></li>
             </ul>
         </nav>
     </header>
@@ -40,28 +42,36 @@
         <div class="container">
             <div class="day">
 
+                <?php foreach($days as $day):?>
+
                 <div class="box-day">
                     <a href="#">
                         <div class="informations">
                             <div class="date">
-                                <h2>27/05</h2>
+                                <h2>
+                                    <?= $day['data']?>
+                                </h2>
                             </div>
                             <div class="infos">
-                                <p>Refeições feitas: 2</p>
-                                <p>Calorias: 1500kcal</p>
+                                <p>Refeições feitas:
+                                    <?= $day['refeicoes']?>
+                                </p>
+                                <p>Calorias:
+                                    <?= $day['calorias']?>kcal
+                                </p>
                             </div>
                         </div>
                     </a>
                 </div>
+                <?php endforeach;?>
 
                 <div class="box-day-add">
                     <div class="circle">
                         <i class="icon fa-solid fa-plus"></i>
                     </div>
                 </div>
-
             </div>
-        </div>
+
     </section>
 
 
