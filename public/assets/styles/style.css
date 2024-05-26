@@ -259,6 +259,9 @@ a {
     margin-top: 1rem 0;
     border-radius: .5rem;
     transition: all .5s ease-in-out;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
 }
 
 .btn-login:hover {
