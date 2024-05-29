@@ -3,9 +3,10 @@
 
 function load() {
 
-    $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);
+    $page = $_GET['page'] ?? '';
+    $page = filter_var($page, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-    $page = (!$page) ? "views/login.php" : "views/{$page}.php";
+    $page = (!$page) ? "../app/views/login.php" : "../app/views/{$page}.php";
 
     if(!file_exists($page)) {
         throw new \Exception("Opa, alguma coisa aconteceu!");

@@ -1,0 +1,15 @@
+{
+    "name": "willi/calories",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "calories\\Controllers\\": [
+                "app/Controllers"
+            ]
+        },
+        "files": [
+            "app/functions/pages.php",
+            "app/data/days.php"
+        ]
+    }
+}

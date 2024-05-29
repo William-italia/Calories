@@ -22,28 +22,28 @@
     <div class="container">
         <div class="day">
 
-            <?php foreach($days as $day):?>
+            <?php foreach ($days as $day) : ?>
 
-            <div class="box-day">
-                <a href="#">
-                    <div class="informations">
-                        <div class="date">
-                            <h2>
-                                <?= $day['data']?>
-                            </h2>
+                <div class="box-day">
+                    <a href="#">
+                        <div class="informations">
+                            <div class="date">
+                                <h2>
+                                    <?= $day['data'] ?>
+                                </h2>
+                            </div>
+                            <div class="infos">
+                                <p>Refeições feitas:
+                                    <?= $day['refeicoes'] ?>
+                                </p>
+                                <p>Calorias:
+                                    <?= $day['calorias'] ?>kcal
+                                </p>
+                            </div>
                         </div>
-                        <div class="infos">
-                            <p>Refeições feitas:
-                                <?= $day['refeicoes']?>
-                            </p>
-                            <p>Calorias:
-                                <?= $day['calorias']?>kcal
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <?php endforeach;?>
+                    </a>
+                </div>
+            <?php endforeach; ?>
 
             <a id="button">
                 <div class="box-day-add">
@@ -53,20 +53,20 @@
                 </div>
             </a>
             <div class="popup">
-            <div class="popup-content">
+                <div class="popup-content">
                     <h1>Inicie seu dia:</h1>
                     <i class="close fa-2xl fa-solid fa-xmark"></i>
-                <form action="">
-                    <div class="box-group">
-                        <div class="box-input">
-                            <label for="">Dia:</label>
-                            <input type="date"  placeholder="Ex.: 2024-07-05">
+                    <form action="">
+                        <div class="box-group">
+                            <div class="box-input">
+                                <label for="">Dia:</label>
+                                <input type="date" placeholder="Ex.: 2024-07-05">
+                            </div>
                         </div>
-                    </div>
-                    <button class="btn-login">Criar Dia</button>
-                </form>
+                        <button class="btn-login">Criar Dia</button>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
 </section>
 
