@@ -3,9 +3,7 @@
 
 require_once '../vendor/autoload.php';
 
-// include_once './data/days.php';
-
-require_once '../app/data/days.php';
+include_once '../app/data/days.php';
 ?>
 
 <!DOCTYPE html>
