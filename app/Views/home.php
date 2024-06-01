@@ -1,6 +1,3 @@
-<?php
-?>
-
 <header>
     <nav class="navbar">
         <ul class="nav-links">
@@ -25,22 +22,38 @@
     <div class="container">
         <div class="day">
 
-            <?php foreach ($days as $day) : ?>
+            <?php
 
+            $days = all('tb_days');
+            $meals = all('tb_meal');
+
+
+            foreach ($days as $day) : ?>
                 <div class="box-day">
                     <a href="#">
                         <div class="informations">
                             <div class="date">
                                 <h2>
-                                    <?= $day['data'] ?>
+                                    <?php
+                                    $field = "day_date";
+                                    echo formatDate($day->$field);
+                                    ?>
                                 </h2>
                             </div>
                             <div class="infos">
                                 <p>Refeições feitas:
-                                    <?= $day['refeicoes'] ?>
+                                    <?php
+                                    $mealCount = 0;
+                                    foreach ($meals as $meal) {
+                                        if ($meal->day_id == $day->id) { // Verifique se o meal está relacionado ao dia atual
+                                            $mealCount++;
+                                        }
+                                    }
+                                    echo $mealCount;
+                                    ?>
                                 </p>
                                 <p>Calorias:
-                                    <?= $day['calorias'] ?>kcal
+                                    <?= htmlspecialchars($day->total_calories); ?> kcal
                                 </p>
                             </div>
                         </div>

@@ -1,9 +1,8 @@
 <?php
 
 
-require_once '../vendor/autoload.php';
+require '../bootstrap.php';
 
-include_once '../app/data/days.php';
 ?>
 
 <!DOCTYPE html>
